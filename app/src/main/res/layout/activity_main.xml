@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    android:id="@android:id/tabhost"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+            <TableLayout
+                android:id="@+id/details"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:stretchColumns="1"
+                android:paddingTop="4dip"
+                >
+                <TableRow
+                    android:id="@+id/tblRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textName"
+                        android:text="Name:"
+                        android:textSize="25dp"
+                        ></TextView>
+                    <EditText android:id="@+id/ediName"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"></EditText>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tblRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textAddress"
+                        android:text="Address:"
+                        android:textSize="25dp"
+                        ></TextView>
+                    <EditText android:id="@+id/ediAddress"></EditText>
+                </TableRow>
+                <TableRow>
+                    <TextView android:id="@+id/textType"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Type"
+                        android:textSize="25dp"></TextView>
+                    <RadioGroup
+                        android:id="@+id/radioGroup1">
+                        <RadioButton
+                            android:id="@+id/radioTake_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take out"
+                            android:textSize="25dp"></RadioButton>
+                        <RadioButton
+                            android:id="@+id/radioSit_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sitdown"
+                            android:textSize="25dp"></RadioButton>
+                        <RadioButton
+                            android:id="@+id/radioDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery"
+                            android:textSize="25dp"></RadioButton>
+                    </RadioGroup>
+                </TableRow>
+                <Button android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textSize="25dp"></Button>
+            </TableLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
